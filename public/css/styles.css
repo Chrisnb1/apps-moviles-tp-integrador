@@ -1,1 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+.category-div {
+    width: 100%;
+    max-height: fit-content;
+    text-align: center;
+}
+
+.category-div img {
+    width: 30%;
+    display: inline;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.card {
+    width: 30%;
+    height: fit-content;
+    border: 3px solid red;
+    
+}
+
+.card img {
+    width: 50px;
+}
