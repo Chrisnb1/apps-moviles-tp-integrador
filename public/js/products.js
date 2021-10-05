@@ -1,11 +1,12 @@
-import {x} from './app.js';
+import {listProducts} from './app.js';
 
 const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 const productsDiv = $('.products-div');
 
     
 $(document).ready(function(){
-    console.log(x);
+    var category = listProducts;
+    console.log(category);
 });
 
 const getXCategory = (category) => {

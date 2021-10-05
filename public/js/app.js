@@ -7,6 +7,9 @@ const productsDiv = $('.products-div');
 
 const main = $('.main');
 
+//var listProducts = [];
+
+
 $(document).ready(function(){
     
     /*console.log(window.location.href)
@@ -60,11 +63,12 @@ const renderCategories = (datos) => {
     
     var btns = $('.btn');
     
-    btns.click(function (){
+    btns.click(function(){
         var id = $(this).attr("id");
         console.log(id);
-        window.location.href = 'products.html';
+        //window.location.href = 'products.html';
         getXCategory(id);
+        
     });
     
 }
@@ -91,7 +95,10 @@ const getXCategory = (category) => {
 const renderProducts = (datos) => {
     console.log(datos);
     
-    $.each(datos.meals, function(index, obj){
+    
+    window.location.href = 'products.html';
+
+    /*$.each(datos.meals, function(index, obj){
         let product = 
         `
         <article>
@@ -102,9 +109,8 @@ const renderProducts = (datos) => {
         `;
         
         $(product).appendTo(productsDiv);
-    });
+    });*/
     
 }
-
 
 
