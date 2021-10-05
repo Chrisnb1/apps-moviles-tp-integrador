@@ -1,13 +1,11 @@
-/*
+import {x} from './app.js';
+
+const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 const productsDiv = $('.products-div');
 
-var btns = $('.btn');
     
-btns.click(function (){
-    var id = $(this).attr("id");
-    console.log(id);
-    getXCategory(id);
-    window.location.href = 'products.html';
+$(document).ready(function(){
+    console.log(x);
 });
 
 const getXCategory = (category) => {
@@ -47,4 +45,3 @@ const renderProducts = (datos) => {
     });
     
 }
-*/

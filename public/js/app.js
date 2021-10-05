@@ -1,8 +1,9 @@
 const urlAllCategories = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
+const productsDiv = $('.products-div');
 
 const main = $('.main');
-const productsDiv = $('.products-div');
+
 const loc = 'http://127.0.0.1:5500/html/products.html'
 
 $(document).ready(function(){
@@ -33,26 +34,6 @@ const getAllCategories = () => {
     })
 }
 
-/*
-const getXCategory = (category) => {
-    $.ajax({
-        url: urlByCategory + category,
-        type: "GET",
-        dataType: "json",
-        success: function(datos){
-            //renderProducts(datos, category);
-            renderProducts(datos)
-            
-        },
-        error: function(xhr, status, error){
-            console.log(xhr);
-            console.log(status);
-            console.log(error);
-        }
-    })
-}
-*/
-
 const renderCategories = (datos) => {
     console.log(datos);
     $.each(datos.categories, function(index, obj){
@@ -80,11 +61,13 @@ const renderCategories = (datos) => {
     btns.click(function (){
         var id = $(this).attr("id");
         console.log(id);
-        getXCategory(id);
-        //window.location.href = 'products.html';
+        
+        //getXCategory(id);
+        window.location.href = 'products.html';
     });
     
 }
+
 
 const getXCategory = (category) => {
     $.ajax({
@@ -92,7 +75,6 @@ const getXCategory = (category) => {
         type: "GET",
         dataType: "json",
         success: function(datos){
-            //renderProducts(datos, category);
             
             renderProducts(datos);
             
@@ -123,24 +105,5 @@ const renderProducts = (datos) => {
     window.location.href = 'products.html';
 }
 
-/*
-export const renderProducts = (datos) => {
-    console.log(datos);
-    
-    $.each(datos.meals, function(index, obj){
-        let product = 
-        `
-        <article>
-            <h1>${obj.strMeal}</h1>
-            <p>${obj.idMeal}</p>
-            <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
-        </article>
-        `;
-        return product;
-        //let productsDiv = $('.products-'+category);
-        //$(product).appendTo(productsDiv);
-    });
-}
-*/
 
 
