@@ -66,14 +66,15 @@ const renderCategories = (datos) => {
     btns.click(function(){
         var id = $(this).attr("id");
         console.log(id);
-        //window.location.href = 'products.html';
-        getXCategory(id);
+        localStorage.setItem('category', id);
+        window.location.href = 'products.html';
+        //getXCategory(id);
         
     });
     
 }
 
-
+/*
 const getXCategory = (category) => {
     $.ajax({
         url: urlByCategory + category,
@@ -91,26 +92,6 @@ const getXCategory = (category) => {
         }
     })
 }
-
-const renderProducts = (datos) => {
-    console.log(datos);
-    
-    
-    window.location.href = 'products.html';
-
-    /*$.each(datos.meals, function(index, obj){
-        let product = 
-        `
-        <article>
-            <h1>${obj.strMeal}</h1>
-            <p>${obj.idMeal}</p>
-            <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
-        </article>
-        `;
-        
-        $(product).appendTo(productsDiv);
-    });*/
-    
-}
+*/
 
 

@@ -1,12 +1,12 @@
-import {listProducts} from './app.js';
 
 const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 const productsDiv = $('.products-div');
 
     
 $(document).ready(function(){
-    var category = listProducts;
+    var category = localStorage.getItem('category');
     console.log(category);
+    getXCategory(category);
 });
 
 const getXCategory = (category) => {
@@ -15,7 +15,6 @@ const getXCategory = (category) => {
         type: "GET",
         dataType: "json",
         success: function(datos){
-            //renderProducts(datos, category);
             
             renderProducts(datos);
             
@@ -41,7 +40,7 @@ const renderProducts = (datos) => {
             <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
         </article>
         `;
-        //let productsDiv = $('.products-'+category);
+        
         $(product).appendTo(productsDiv);
     });
     
