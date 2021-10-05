@@ -1,9 +1,9 @@
 const urlAllCategories = 'https://www.themealdb.com/api/json/v1/1/categories.php';
-const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
+//const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
-const loc = 'http://127.0.0.1:5500/html/products.html';
+//const loc = 'http://127.0.0.1:5500/html/products.html';
 
-const productsDiv = $('.products-div');
+//const productsDiv = $('.products-div');
 
 const main = $('.main');
 

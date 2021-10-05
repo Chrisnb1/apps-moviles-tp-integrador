@@ -1,5 +1,7 @@
 
 const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
+const urlProductDetails = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
+
 const productsDiv = $('.products-div');
 
     
