@@ -45,7 +45,7 @@ const renderCategories = (datos) => {
         console.log(obj.strCategory);
         let category = 
         `
-        <div class="category-${obj.strCategory}">
+        <div class="category-div category-${obj.strCategory}">
             <section>
                 <h1 class="title">${obj.strCategory}</h1>
                 <p class="id">${obj.idCategory}</p>
