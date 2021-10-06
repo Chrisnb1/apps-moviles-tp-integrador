@@ -29,21 +29,47 @@ const getXCategory = (category) => {
     })
 }
 
-
 const renderProducts = (datos) => {
-    console.log(datos);
     
     $.each(datos.meals, function(index, obj){
         let product = 
         `
-        <article>
+        <div class="card">
             <h1>${obj.strMeal}</h1>
             <p>${obj.idMeal}</p>
             <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
-        </article>
+            <button class="btn-details" id="${obj.idMeal}">Ver detalles</button>
+        </div>
         `;
-        
         $(product).appendTo(productsDiv);
     });
+
+    var btnsDetails = $('.btn-details');
     
+    btnsDetails.click(function (){
+        var id = $(this).attr("id");
+        console.log(id);
+        getProductDetails(id);
+        
+    });
+}
+
+const getProductDetails = (id) => {
+    $.ajax({
+        url: urlProductDetails + id,
+        type: "GET",
+        dataType: "json",
+        success: function(datos){
+            renderProductsDetails(datos);
+        },
+        error: function(xhr, status, error){
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+        }
+    })
+}
+
+const renderProductsDetails = (datos) => {
+    console.log(datos);
 }
