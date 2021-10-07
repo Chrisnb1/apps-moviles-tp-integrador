@@ -39,6 +39,7 @@ const renderProducts = (datos) => {
             <p>${obj.idMeal}</p>
             <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <button class="btn-details" id="${obj.idMeal}">Ver detalles</button>
+            <button class="btn-share" id="share-${obj.idMeal}">Compartir</button>
         </div>
         `;
         $(product).appendTo(productsDiv);
@@ -52,6 +53,12 @@ const renderProducts = (datos) => {
         getProductDetails(id);
         
     });
+
+    var btnsShare = $('.btn-share');
+    btnsShare.click(function(e){
+        console.log(e.target.parentElement);
+        getItem(e.target.parentElement);
+    })
 }
 
 const getProductDetails = (id) => {
@@ -72,4 +79,14 @@ const getProductDetails = (id) => {
 
 const renderProductsDetails = (datos) => {
     console.log(datos);
+}
+
+const getItem = item => {
+    const producto = {
+        title: item.querySelector('h1').textContent,
+        price: item.querySelector('p').textContent
+    }
+
+    localStorage.setItem('share', JSON.stringify(producto));
+    window.location.href = 'share.html';
 }
