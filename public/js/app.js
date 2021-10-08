@@ -11,14 +11,6 @@ const main = $('.main');
 
 
 $(document).ready(function(){
-    
-    /*console.log(window.location.href)
-    if (window.location.href == loc) {
-        console.log('pagina de productos');
-        
-    }else{
-        getAllCategories();
-    }*/
     getAllCategories();
 });
 
