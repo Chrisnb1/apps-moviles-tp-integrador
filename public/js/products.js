@@ -84,12 +84,13 @@ const renderProductsDetails = (datos, id) => {
         `
         <div>
             <h3>Tags: ${obj.strTags}</h3>
-            <p>Area: ${obj.strArea}</p>
+            <p>Area: ${obj.strArea}</p> 
             <a href="${obj.strSource}" target="_blank">Receta</a>
             <a href="${obj.strYoutube}" target="_blank">Youtube</a>
         </div>
-        `
-        $(details).appendTo();
+        `;
+        let detailsDiv = $('#details-'+ id);
+        $(details).appendTo(detailsDiv);
         
     })
 }
