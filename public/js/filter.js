@@ -7,6 +7,7 @@ const resultsDiv = $('.results');
 $(document).ready(function(){
     searchByName();
     getAreas();
+    searchByArea();
 });
 
 const searchByName = () => {
@@ -59,4 +60,32 @@ const mostrarAreas = (datos) => {
         
         $(`<option value="${obj.strArea}">${obj.strArea}</option>`).appendTo($('#area'));
     })
+}
+
+const searchByArea = () => {
+    $('#search-by-area').submit(function(event){
+        event.preventDefault();
+        let area = $('#area').val();
+        getByArea(area);
+    })
+}
+
+const getByArea = (area) => {
+    $.ajax({
+        url: urlGetByAreas + area,
+        type: "GET",
+        dataType: "json",
+        success: function(datos){
+            renderByArea(datos);
+        },
+        error: function(xhr, status, error){
+            console.log(xhr);
+            console.log(status);
+            console.log(error);
+        }
+    })
+}
+
+const renderByArea = (datos) => {
+    console.log(datos);
 }

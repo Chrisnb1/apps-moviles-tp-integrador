@@ -40,6 +40,7 @@ const renderProducts = (datos) => {
             <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <button class="btn-details" id="${obj.idMeal}">Ver detalles</button>
             <button class="btn-share" id="share-${obj.idMeal}">Compartir</button>
+            <div class="details-div" id="details-${obj.idMeal}"></div>
         </div>
         `;
         $(product).appendTo(productsDiv);
@@ -47,11 +48,10 @@ const renderProducts = (datos) => {
 
     var btnsDetails = $('.btn-details');
     
-    btnsDetails.click(function (){
+    btnsDetails.click(function (e){
         var id = $(this).attr("id");
         console.log(id);
         getProductDetails(id);
-        
     });
 
     var btnsShare = $('.btn-share');
@@ -67,7 +67,7 @@ const getProductDetails = (id) => {
         type: "GET",
         dataType: "json",
         success: function(datos){
-            renderProductsDetails(datos);
+            renderProductsDetails(datos, id);
         },
         error: function(xhr, status, error){
             console.log(xhr);
@@ -77,8 +77,21 @@ const getProductDetails = (id) => {
     })
 }
 
-const renderProductsDetails = (datos) => {
-    console.log(datos);
+const renderProductsDetails = (datos, id) => {
+    
+    $.each(datos.meals, function(index, obj){
+        let details = 
+        `
+        <div>
+            <h3>Tags: ${obj.strTags}</h3>
+            <p>Area: ${obj.strArea}</p>
+            <a href="${obj.strSource}" target="_blank">Receta</a>
+            <a href="${obj.strYoutube}" target="_blank">Youtube</a>
+        </div>
+        `
+        $(details).appendTo();
+        
+    })
 }
 
 const getItem = item => {
