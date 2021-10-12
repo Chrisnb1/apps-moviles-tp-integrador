@@ -51,6 +51,7 @@ const renderProducts = (datos) => {
     btnsDetails.click(function (e){
         var id = $(this).attr("id");
         console.log(id);
+        console.log(e.target.parentElement);
         getProductDetails(id);
     });
 
@@ -85,6 +86,7 @@ const renderProductsDetails = (datos, id) => {
         <div>
             <h3>Tags: ${obj.strTags}</h3>
             <p>Area: ${obj.strArea}</p> 
+            <p>${obj.strInstructions}</p>
             <a href="${obj.strSource}" target="_blank">Receta</a>
             <a href="${obj.strYoutube}" target="_blank">Youtube</a>
         </div>
