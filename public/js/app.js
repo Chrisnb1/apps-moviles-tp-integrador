@@ -5,7 +5,7 @@ const urlAllCategories = 'https://www.themealdb.com/api/json/v1/1/categories.php
 
 //const productsDiv = $('.products-div');
 
-const main = $('.main');
+//const main = $('.main');
 
 //var listProducts = [];
 
