@@ -4,6 +4,24 @@ const urlProductDetails = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=
 const productsDiv = $('.products-div');
 const btnContainer = $('.btn-container');
 
+const historyList = { list : [] };
+
+// Arrays en LocalStorage
+Storage.prototype.getArray = function(arrayName) {
+    var thisArray = [];
+    var fetchArrayObject = this.getItem(arrayName);
+    if (typeof fetchArrayObject !== 'undefined') {
+      if (fetchArrayObject !== null) { thisArray = JSON.parse(fetchArrayObject); }
+    }
+    return thisArray;
+  }
+  
+  Storage.prototype.pushArrayItem = function(arrayName,arrayItem) {
+    var existingArray = this.getArray(arrayName);
+    existingArray.push(arrayItem);
+    this.setItem(arrayName,JSON.stringify(existingArray));
+  }
+
 $(document).ready(function() {
     var category = localStorage.getItem('category');
     console.log(category);
@@ -63,10 +81,12 @@ const renderProducts = (datos) => {
 
     var btnsDetails = $('.btn-details');
     
-    btnsDetails.click(function (e){
+    btnsDetails.click(function (){
         var id = $(this).attr("id");
         console.log(id);
-        console.log(e.target.parentElement);
+        localStorage.pushArrayItem('historyList', id);
+        //historyList.list.push(id);
+        //localStorage.setItem('history', JSON.stringify(historyList));
         getProductDetails(id);
     });
 
