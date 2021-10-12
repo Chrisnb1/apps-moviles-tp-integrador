@@ -35,6 +35,7 @@ const renderProducts = (datos) => {
         `
         <div class="card">
             <h1>${obj.strMeal}</h1>
+            <p>$ <span id="price">1000</span></p>
             <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <div class"icons-cards">
                 <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
@@ -44,7 +45,7 @@ const renderProducts = (datos) => {
                 share
                 </span></button>
             </div>
-            
+            <div id="details-${obj.idMeal}"></div>
         </div>
         `;
         $(product).appendTo(productsDiv);
@@ -61,8 +62,8 @@ const renderProducts = (datos) => {
 
     var btnsShare = $('.btn-share');
     btnsShare.click(function(e){
-        console.log(e.target.parentElement);
-        getItem(e.target.parentElement);
+        console.log(((e.target.parentElement).parentElement).parentElement);
+        getItem(((e.target.parentElement).parentElement).parentElement);
     })
 }
 
@@ -90,7 +91,7 @@ const renderProductsDetails = (datos, id) => {
         <div>
             <h3>Tags: ${obj.strTags}</h3>
             <p>Area: ${obj.strArea}</p> 
-            <p>${obj.strInstructions}</p>
+            
             <a href="${obj.strSource}" target="_blank">Receta</a>
             <a href="${obj.strYoutube}" target="_blank">Youtube</a>
         </div>
@@ -104,7 +105,7 @@ const renderProductsDetails = (datos, id) => {
 const getItem = item => {
     const producto = {
         title: item.querySelector('h1').textContent,
-        price: item.querySelector('p').textContent
+        price: item.querySelector('#price').textContent
     }
 
     localStorage.setItem('share', JSON.stringify(producto));
