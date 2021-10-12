@@ -10,6 +10,7 @@ $(document).ready(function() {
     getXCategory(category);
 });
 
+
 const getXCategory = (category) => {
     $.ajax({
         url: urlByCategory + category,
@@ -49,6 +50,10 @@ const renderProducts = (datos) => {
         </div>
         `;
         $(product).appendTo(productsDiv);
+        if (index === 9) {
+            return false;
+            
+        }
     });
 
     var btnsDetails = $('.btn-details');
