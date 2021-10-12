@@ -35,9 +35,16 @@ const renderProducts = (datos) => {
             `
         <div class="card">
             <h1>${obj.strMeal}</h1>
-            <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
-            <button class="btn-details btn-product" id="${obj.idMeal}">Ver detalles</button>
-            <button class="btn-share btn-product" id="share-${obj.idMeal}">Compartir</button>
+            <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
+            <div class"icons-cards">
+                <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
+                view_list
+                </span></button>
+                <button class="btn-share btn-product" id="share-${obj.idMeal}"><span class="material-icons-outlined">
+                share
+                </span></button>
+            </div>
+            
         </div>
         `;
         $(product).appendTo(productsDiv);
