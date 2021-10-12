@@ -2,7 +2,7 @@ const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 const urlProductDetails = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
 const productsDiv = $('.products-div');
-
+const btnContainer = $('.btn-container');
 
 $(document).ready(function() {
     var category = localStorage.getItem('category');
@@ -50,9 +50,14 @@ const renderProducts = (datos) => {
         </div>
         `;
         $(product).appendTo(productsDiv);
+
         if (index === 9) {
+            let btnSeeMore = 
+            `
+            <button class="see-more">Ver Mas</button>
+            `;
+            $(btnSeeMore).appendTo(btnContainer);
             return false;
-            
         }
     });
 
@@ -69,7 +74,38 @@ const renderProducts = (datos) => {
     btnsShare.click(function(e){
         console.log(((e.target.parentElement).parentElement).parentElement);
         getItem(((e.target.parentElement).parentElement).parentElement);
+    });
+
+    var btnMore = $('.see-more');
+    btnMore.click(function(){
+        renderMoreProducts(datos);
     })
+}
+
+const renderMoreProducts = (datos) => {
+    $.each(datos.meals, function(index, obj){
+        if (index > 9) {
+            let product = 
+            `
+            <div class="card">
+                <h1>${obj.strMeal}</h1>
+                <p>$ <span id="price">1000</span></p>
+                <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
+                <div class"icons-cards">
+                    <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
+                    view_list
+                    </span></button>
+                    <button class="btn-share btn-product" id="share-${obj.idMeal}"><span class="material-icons-outlined">
+                    share
+                    </span></button>
+                </div>
+                <div id="details-${obj.idMeal}"></div>
+            </div>
+            `;
+            $(product).appendTo(productsDiv);
+            $('.see-more').hide();
+        }
+    });
 }
 
 const getProductDetails = (id) => {
