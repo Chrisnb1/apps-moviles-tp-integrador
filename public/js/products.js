@@ -1,11 +1,10 @@
-
 const urlByCategory = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 const urlProductDetails = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
 const productsDiv = $('.products-div');
 
-    
-$(document).ready(function(){
+
+$(document).ready(function() {
     var category = localStorage.getItem('category');
     console.log(category);
     getXCategory(category);
@@ -16,12 +15,12 @@ const getXCategory = (category) => {
         url: urlByCategory + category,
         type: "GET",
         dataType: "json",
-        success: function(datos){
-            
+        success: function(datos) {
+
             renderProducts(datos);
-            
+
         },
-        error: function(xhr, status, error){
+        error: function(xhr, status, error) {
             console.log(xhr);
             console.log(status);
             console.log(error);
@@ -36,12 +35,10 @@ const renderProducts = (datos) => {
         `
         <div class="card">
             <h1>${obj.strMeal}</h1>
-            <p>${obj.idMeal}</p>
             <img src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <button class="btn-details" id="${obj.idMeal}">Ver detalles</button>
             <button class="btn-share" id="share-${obj.idMeal}">Compartir</button>
             <div class="details-div" id="details-${obj.idMeal}"></div>
-        </div>
         `;
         $(product).appendTo(productsDiv);
     });
