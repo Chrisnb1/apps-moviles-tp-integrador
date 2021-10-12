@@ -87,7 +87,7 @@ const getXCategory = (category) => {
 */
 
 // Menu navbar
-
+/*
 const menu = document.querySelector(".menu");
 const openMenuBtn = document.querySelector(".open-menu");
 const closeMenuBtn = document.querySelector(".close-menu");
@@ -99,7 +99,7 @@ function toggleMenu() {
 
 openMenuBtn.addEventListener("click", toggleMenu);
 closeMenuBtn.addEventListener("click", toggleMenu);
-
+*/
 //const loc = 'http://127.0.0.1:5500/html/products.html';
 
 //const productsDiv = $('.products-div');
