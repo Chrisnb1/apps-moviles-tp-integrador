@@ -1,13 +1,18 @@
+import { renderProducts } from "./products.js";
+
+
 const urlSearchByName = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const urlGetAreas = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
 const urlGetByAreas = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=';
 
-const resultsDiv = $('.results');
+
 
 $(document).ready(function(){
     searchByName();
     getAreas();
     searchByArea();
+    var category = localStorage.getItem('category');
+    $('.products-div').html(`<h2>Ultima Categoria vista: ${category}</h2>`);
 });
 
 const searchByName = () => {
@@ -25,7 +30,17 @@ const getProductsByName = (name) => {
         type: "GET",
         dataType: "json",
         success: function(datos){
-            renderByName(datos);
+            $('.products-div').html("");
+            $('.btn-container').html("");
+            if (datos.meals === null) {
+                swal({
+                    title: "Error",
+                    text: "No se encontro el plato que busco!!!",
+                    icon: "error"
+                })
+            } else {
+                renderProducts(datos);
+            }
         },
         error: function(xhr, status, error){
             console.log(xhr);
@@ -33,10 +48,6 @@ const getProductsByName = (name) => {
             console.log(error);
         }
     })
-}
-
-const renderByName = (datos) => {
-    console.log(datos);
 }
 
 const getAreas = () => {
@@ -76,7 +87,8 @@ const getByArea = (area) => {
         type: "GET",
         dataType: "json",
         success: function(datos){
-            renderByArea(datos);
+            $('.products-div').html("");
+            renderProducts(datos);
         },
         error: function(xhr, status, error){
             console.log(xhr);
@@ -86,6 +98,3 @@ const getByArea = (area) => {
     })
 }
 
-const renderByArea = (datos) => {
-    console.log(datos);
-}

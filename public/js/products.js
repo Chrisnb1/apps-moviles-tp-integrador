@@ -4,7 +4,7 @@ const urlProductDetails = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=
 const productsDiv = $('.products-div');
 const btnContainer = $('.btn-container');
 
-const historyList = { list : [] };
+
 
 // Arrays en LocalStorage
 Storage.prototype.getArray = function(arrayName) {
@@ -24,7 +24,7 @@ Storage.prototype.getArray = function(arrayName) {
 
 $(document).ready(function() {
     var category = localStorage.getItem('category');
-    console.log(category);
+    //console.log(category);
     getXCategory(category);
 });
 
@@ -47,7 +47,7 @@ const getXCategory = (category) => {
     })
 }
 
-const renderProducts = (datos) => {
+export const renderProducts = (datos) => {
     
     $.each(datos.meals, function(index, obj){
         let product = 
@@ -119,7 +119,7 @@ const renderMoreProducts = (datos) => {
                     share
                     </span></button>
                 </div>
-                <div id="details-${obj.idMeal}"></div>
+                
             </div>
             `;
             $(product).appendTo(productsDiv);
@@ -157,8 +157,13 @@ const renderProductsDetails = (datos, id) => {
             <a href="${obj.strYoutube}" target="_blank">Youtube</a>
         </div>
         `;
-        let detailsDiv = $('#details-'+ id);
-        $(details).appendTo(detailsDiv);
+        Swal.fire({
+            title: 'Detalles',
+            icon: 'info',
+            html: details
+        })
+        //let detailsDiv = $('#details-'+ id);
+        //$(details).appendTo(detailsDiv);
         
     })
 }
