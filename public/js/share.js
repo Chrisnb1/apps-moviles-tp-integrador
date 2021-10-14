@@ -166,12 +166,12 @@ function cancelForm(e) {
     e.preventDefault();
     swal({
         title: "Cancelar",
-        text: "Desea volver a la pagina anterior?",
+        text: "Desea volver a la pagina de inicio?",
         icon: "warning",
         buttons: { yes: "Si", no: "No" },
     }).then((value) => {
         if (value === "yes") {
-            backPage("products.html");
+            backPage("index.html");
         }
     });
 }

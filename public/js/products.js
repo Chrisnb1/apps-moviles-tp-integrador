@@ -47,7 +47,7 @@ const getXCategory = (category) => {
     })
 }
 
-export const renderProducts = (datos) => {
+const renderProducts = (datos) => {
     
     $.each(datos.meals, function(index, obj){
         let product = 
@@ -72,7 +72,7 @@ export const renderProducts = (datos) => {
         if (index === 9) {
             let btnSeeMore = 
             `
-            <button class="see-more">Ver Mas</button>
+            <a class="see-more"><img src="https://img.icons8.com/material-sharp/48/000000/plus--v1.png"/></a>
             `;
             $(btnSeeMore).appendTo(btnContainer);
             return false;
@@ -102,7 +102,7 @@ export const renderProducts = (datos) => {
     });
 }
 
-export const renderMoreProducts = (datos) => {
+const renderMoreProducts = (datos) => {
     $.each(datos.meals, function(index, obj){
         if (index > 9) {
             let product = 
@@ -128,7 +128,7 @@ export const renderMoreProducts = (datos) => {
     });
 }
 
-export const getProductDetails = (id) => {
+const getProductDetails = (id) => {
     $.ajax({
         url: urlProductDetails + id,
         type: "GET",
@@ -153,8 +153,8 @@ const renderProductsDetails = (datos, id) => {
             <h3>Tags: ${obj.strTags}</h3>
             <p>Area: ${obj.strArea}</p> 
             
-            <a href="${obj.strSource}" target="_blank">Receta</a>
-            <a href="${obj.strYoutube}" target="_blank">Youtube</a>
+            <a href="${obj.strSource}" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/cooking-book.png"/></a>
+            <a href="${obj.strYoutube}" target="_blank"><img src="https://img.icons8.com/color/50/000000/youtube-play.png"/></a>
         </div>
         `;
         Swal.fire({

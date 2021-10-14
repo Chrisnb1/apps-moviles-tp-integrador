@@ -38,3 +38,13 @@
     background-size: cover;
     padding: 60px 60px;
 }
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.see-more {
+    padding-top: 15px;
+    cursor: pointer;
+}
