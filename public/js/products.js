@@ -64,7 +64,7 @@ export const renderProducts = (datos) => {
                 share
                 </span></button>
             </div>
-            <div id="details-${obj.idMeal}"></div>
+
         </div>
         `;
         $(product).appendTo(productsDiv);
@@ -99,7 +99,7 @@ export const renderProducts = (datos) => {
     var btnMore = $('.see-more');
     btnMore.click(function(){
         renderMoreProducts(datos);
-    })
+    });
 }
 
 const renderMoreProducts = (datos) => {
