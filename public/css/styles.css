@@ -116,12 +116,12 @@
 /* Moviles en horizontal o tablets en vertical */
 
 @media (min-width: 480px) {
-    .search {
+    /* .search {
         width: 250px;
     }
     .search {
         width: 300px;
-    }
+    } */
 }
 
 
@@ -138,7 +138,7 @@
 /* Escritorios muy anchos */
 
 @media (min-width: 950px) {
-    .search {
+    /* .search {
         width: 400px;
-    }
+    } */
 }
