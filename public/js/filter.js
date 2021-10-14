@@ -163,8 +163,8 @@ const renderByArea = (datos) => {
     });
 
 }
-
 */
+
 
 // Codigo anterior
 
@@ -200,19 +200,7 @@ const searchByName = () => {
         let name = $('#name').val();
         getProductsByName(name);
     })
-    /*
-    $('.btn-search').click(function(event) {
-        event.preventDefault();
-        let name = $('#name').val();
 
-        if (name === '' || name === name_repeat) {
-            return;
-        }
-
-        getProductsByName(name);
-        name_repeat = name;
-
-    })*/
 }
 
 const getProductsByName = (name) => {
@@ -273,19 +261,6 @@ const searchByArea = () => {
         getByArea(area);
     })
     
-    
-    /*$('.btn-search').click(function(event) {
-        event.preventDefault();
-        let area = $('#area').val();
-
-        if (area === '' || area === area_repeat) {
-            return;
-        }
-        card.remove();
-        getByArea(area);
-        area_repeat = area;
-    })
-    */
 }
 
 const getByArea = (area) => {

@@ -102,7 +102,7 @@ export const renderProducts = (datos) => {
     });
 }
 
-const renderMoreProducts = (datos) => {
+export const renderMoreProducts = (datos) => {
     $.each(datos.meals, function(index, obj){
         if (index > 9) {
             let product = 
@@ -128,7 +128,7 @@ const renderMoreProducts = (datos) => {
     });
 }
 
-const getProductDetails = (id) => {
+export const getProductDetails = (id) => {
     $.ajax({
         url: urlProductDetails + id,
         type: "GET",
@@ -168,7 +168,7 @@ const renderProductsDetails = (datos, id) => {
     })
 }
 
-const getItem = item => {
+export const getItem = item => {
     const producto = {
         title: item.querySelector('h1').textContent,
         price: item.querySelector('#price').textContent
