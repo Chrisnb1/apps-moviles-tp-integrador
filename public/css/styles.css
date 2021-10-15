@@ -112,9 +112,29 @@
     background-attachment: fixed;
 }
 
+/*
+.img-contacto {
+    background-image: url(/img/diseo-y-desarrollo-web-building-a-website.png);
+    background-attachment: fixed;
+    padding: 50px 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+*/
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    margin-top: 15px;
+}
+
 #mapId {
-    width: 50%;
-    height: 300px;
+    width: 70%;
+    height: 200px;
+    margin: 10px;
 }
 
 /* Moviles en horizontal o tablets en vertical */
@@ -136,6 +156,22 @@
         width: 25%;
         height: 25%;
     }
+
+    #mapId {
+        width: 70%;
+        height: 400px;
+        margin: 10px;
+    }
+
+    .img-contacto {
+        background-image: url(/img/diseo-y-desarrollo-web-building-a-website.png);
+        background-attachment: fixed;
+        padding: 50px 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+    }
 }
 
 
@@ -145,4 +181,14 @@
     /* .search {
         width: 400px;
     } */
+
+    .img-contacto {
+        background-image: url(/img/diseo-y-desarrollo-web-building-a-website.png);
+        background-attachment: fixed;
+        padding: 50px 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+    }
 }
