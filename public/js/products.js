@@ -54,7 +54,7 @@ const renderProducts = (datos) => {
         `
         <div class="card">
             <h1>${obj.strMeal}</h1>
-            <p>$ <span id="price">1000</span></p>
+            <h2 class="priceH2">$ <span id="price">1000</span></h2>
             <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <div class"icons-cards">
                 <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
@@ -84,7 +84,15 @@ const renderProducts = (datos) => {
     btnsDetails.click(function (){
         var id = $(this).attr("id");
         console.log(id);
-        localStorage.pushArrayItem('historyList', id);
+        var historyList = localStorage.getArray('historyList');
+        
+        if(historyList.includes(id)){
+            console.log('Ya esta en el historial');
+        }
+        else {
+            localStorage.pushArrayItem('historyList', id);
+        }
+        
         //historyList.list.push(id);
         //localStorage.setItem('history', JSON.stringify(historyList));
         getProductDetails(id);
@@ -109,7 +117,7 @@ const renderMoreProducts = (datos) => {
             `
             <div class="card">
                 <h1>${obj.strMeal}</h1>
-                <p>$ <span id="price">1000</span></p>
+                <p class="sub-title">$ <span id="price">1000</span></p>
                 <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
                 <div class"icons-cards">
                     <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
@@ -162,8 +170,6 @@ const renderProductsDetails = (datos, id) => {
             icon: 'info',
             html: details
         })
-        //let detailsDiv = $('#details-'+ id);
-        //$(details).appendTo(detailsDiv);
         
     })
 }

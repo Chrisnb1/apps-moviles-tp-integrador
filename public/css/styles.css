@@ -112,6 +112,10 @@
     background-attachment: fixed;
 }
 
+.title-contact {
+    text-align: center;
+}
+
 /*
 .img-contacto {
     background-image: url(/img/diseo-y-desarrollo-web-building-a-website.png);

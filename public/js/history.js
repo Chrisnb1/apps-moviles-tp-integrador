@@ -16,9 +16,22 @@ $(document).ready(function() {
     //var history = localStorage.getItem('history');
     var historyList = localStorage.getArray('historyList');
     console.log(historyList);
-    $.each(historyList, function(index, obj){
-        getProductsById(obj);
-    })
+    if(historyList.length === 0){
+        swal({
+            title: "No ha visto ningun plato",
+            text: "Desea volver a la pagina de inicio?",
+            icon: "warning",
+            buttons: { yes: "Si", no: "No" },
+        }).then((value) => {
+            if (value === "yes") {
+                backPage("index.html");
+            }
+        });
+    } else {
+        $.each(historyList, function(index, obj){
+            getProductsById(obj);
+        });
+    }
 
 });
 
@@ -60,4 +73,8 @@ const renderProductsById = (datos) => {
         `;
         $(product).appendTo(productsDiv);
     });
+}
+
+function backPage(route) {
+    window.location.href = route;
 }
