@@ -4,6 +4,13 @@ const products_index = $('.products-index');
 
 $(document).ready(function() {
     getAllCategories();
+
+    // Mapa
+var myMap = L.map('mapId').setView([-34.936760000,-57.936340000], 15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(myMap);
+var marker = L.marker([-34.936760000,-57.936340000]).addTo(myMap);
+marker.bindPopup("<b>Nuestras Oficinas!</b><br>Catedral de La Plata.").openPopup();
 });
 
 
@@ -56,4 +63,6 @@ const renderCategories = (datos) => {
     });
 
 }
+
+
 

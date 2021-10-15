@@ -112,6 +112,10 @@
     background-attachment: fixed;
 }
 
+#mapId {
+    width: 50%;
+    height: 300px;
+}
 
 /* Moviles en horizontal o tablets en vertical */
 

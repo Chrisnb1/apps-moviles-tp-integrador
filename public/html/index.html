@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="/css/header&footer.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/cards.css">
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
     <title>Index</title>
 </head>
@@ -29,7 +35,7 @@
                 <li><a href="/html/search.html" class="option-bar">Buscar</a></li>
                 <li><a href="#" class="option-bar">Carrito</a></li>
                 <li><a href="/html/history.html" class="option-bar">Historial</a></li>
-                <li><a href="#" class="option-bar">Contacto</a></li>
+                <li><a href="#contacto" class="option-bar">Contacto</a></li>
                 <li class="li-icon first-icon">
                     <a href="#" class="option-bar">
                         <img class="instagram" src="https://img.icons8.com/material-outlined/24/808080/instagram-new--v1.png" />
@@ -77,6 +83,12 @@
         </div>
 
     </main>
+
+    <div id="contacto">
+        <section>
+            <div id="mapId"></div>
+        </section>
+    </div>
     <footer class="footer">
         <p>&copy; Servicio de Comidas - Grupo 1 (Nicolas Acuña - Christian Botta).</p>
     </footer>
