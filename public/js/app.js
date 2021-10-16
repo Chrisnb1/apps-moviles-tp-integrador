@@ -4,6 +4,7 @@ const products_index = $('.products-index');
 
 $(document).ready(function() {
     getAllCategories();
+    getRandomMeals();
 
     // Mapa
 var myMap = L.map('mapId').setView([-34.936760000,-57.936340000], 15);
@@ -64,5 +65,47 @@ const renderCategories = (datos) => {
 
 }
 
+// Sector de publicidad
 
+const urlRandomMeal = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
+const publicityDiv = $('.publicity-container');
+
+const getRandomMeals = () => {
+    for (let index = 0; index < 5; index++) {
+        $.ajax({
+            url: urlRandomMeal,
+            type: "GET",
+            dataType: "json",
+            success: function(datos) {
+                renderRandomMeal(datos);
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr);
+                console.log(status);
+                console.log(error);
+            }
+        })
+        
+    }
+}
+
+const renderRandomMeal = (datos) => {
+    $.each(datos.meals, function(index, obj){
+        let product = 
+        `
+        <div class="card">
+            <p><b>Tags:</b> <span class="sub-title"> ${obj.strTags}</span></p>
+            <h1 class="title">${obj.strMeal}</h1>
+            <p><b>Area:</b> <span class="sub-title"> ${obj.strArea}</span></p>
+            <p><b>Categoria:</b> <span class="sub-title"> ${obj.strCategory}</span></p>
+            <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
+            <div class="icons-cards">
+                <a href="${obj.strSource}" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/cooking-book.png"/></a>
+                <a href="${obj.strYoutube}" target="_blank"><img src="https://img.icons8.com/color/50/000000/youtube-play.png"/></a>
+            </div>
+        </div>
+        `;
+        $(product).appendTo(publicityDiv);
+    });
+}

@@ -66,8 +66,8 @@ const renderProductsById = (datos) => {
             <p>$ <span id="price">1000</span></p>
             <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <div class="icons-cards">
-                <a href="${obj.strSource}" target="_blank">Receta</a>
-                <a href="${obj.strYoutube}" target="_blank">Youtube</a>
+            <a href="${obj.strSource}" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/cooking-book.png"/></a>
+            <a href="${obj.strYoutube}" target="_blank"><img src="https://img.icons8.com/color/50/000000/youtube-play.png"/></a>
             </div>
         </div>
         `;
