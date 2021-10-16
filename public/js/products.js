@@ -54,7 +54,7 @@ const renderProducts = (datos) => {
         `
         <div class="card">
             <h1>${obj.strMeal}</h1>
-            <h2 class="priceH2">$ <span id="price">1000</span></h2>
+            <h2 class="priceH2"><b>$</b> <span id="price">1000</span></h2>
             <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <div class"icons-cards">
                 <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">
@@ -115,7 +115,7 @@ const renderMoreProducts = (datos) => {
             `
             <div class="card">
                 <h1>${obj.strMeal}</h1>
-                <p class="sub-title">$ <span id="price">1000</span></p>
+                <p class="sub-title"><b>$</b> <span id="price">1000</span></p>
                 <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
                 <div class"icons-cards">
                     <button class="btn-details btn-product" id="${obj.idMeal}"><span class="material-icons-outlined">

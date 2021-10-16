@@ -99,6 +99,7 @@ const renderRandomMeal = (datos) => {
             <h1 class="title">${obj.strMeal}</h1>
             <p><b>Area:</b> <span class="sub-title"> ${obj.strArea}</span></p>
             <p><b>Categoria:</b> <span class="sub-title"> ${obj.strCategory}</span></p>
+            <p><b>$</b> <span id="price">1000</span></p>
             <img class"img-card" src="${obj.strMealThumb}" alt="${obj.strMeal}">
             <div class="icons-cards">
                 <a href="${obj.strSource}" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/cooking-book.png"/></a>
