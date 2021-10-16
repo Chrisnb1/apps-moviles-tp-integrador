@@ -93,8 +93,6 @@ const renderProducts = (datos) => {
             localStorage.pushArrayItem('historyList', id);
         }
         
-        //historyList.list.push(id);
-        //localStorage.setItem('history', JSON.stringify(historyList));
         getProductDetails(id);
     });
 
