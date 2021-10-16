@@ -93,12 +93,11 @@
     color: #fff;
 }
 
-.title-1, 
-.categories {
+.title-1 {
     text-align: center;
     margin: 50px 0 50px 0;
     color: #2f2e2e;
-    background: #fafafa;
+    /*background: #fafafa*/;
 }
 
 .title {
@@ -109,13 +108,15 @@
     font: var(--font_2);
 }
 
-.image-2 {
+/*.image-2*/ .categories {
+    
     background-image: url(/img/fondo-productos.webp);
     background-attachment: fixed;
 }
 
 .title-contact {
     text-align: center;
+    margin: 25px;
 }
 
 /*
@@ -195,10 +196,13 @@
     .publicity {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
         width: 25%;
         float: right;
         margin-top: 0;
+    }
+
+    .card-publicity {
+        margin: 15px;
     }
 }
 
