@@ -94,7 +94,7 @@ const renderRandomMeal = (datos) => {
     $.each(datos.meals, function(index, obj){
         let product = 
         `
-        <div class="card">
+        <div class="card card-publicity">
             <p><b>Tags:</b> <span class="sub-title"> ${obj.strTags}</span></p>
             <h1 class="title">${obj.strMeal}</h1>
             <p><b>Area:</b> <span class="sub-title"> ${obj.strArea}</span></p>
