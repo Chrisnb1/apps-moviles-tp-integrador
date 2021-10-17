@@ -74,7 +74,6 @@ const renderProductsById = (datos) => {
         */
         `
         <div class="card card-publicity">
-        <p><b>Tags:</b> <span class="sub-title"> ${obj.strTags}</span></p>
         <h1 class="title">${obj.strMeal}</h1>
         <p><b>Area:</b> <span class="sub-title"> ${obj.strArea}</span></p>
         <p><b>Categoria:</b> <span class="sub-title"> ${obj.strCategory}</span></p>

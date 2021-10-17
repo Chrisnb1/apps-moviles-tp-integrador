@@ -108,7 +108,8 @@
     font: var(--font_2);
 }
 
-/*.image-2*/ .categories {
+.image-2, 
+.categories {
     
     background-image: url(/img/fondo-productos.webp);
     background-attachment: fixed;
@@ -117,6 +118,25 @@
 .title-contact {
     text-align: center;
     margin: 25px;
+}
+
+.history-image {
+    padding: 50px 50px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/img/fondo-product-3.jpg);
+}
+
+.title-history {
+    text-align: center;
+    margin-top: 0;
+    color: #fafafa;
 }
 
 /*
@@ -184,26 +204,7 @@
         position: relative;
     }
 
-    .main-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    .categories {
-        width: 75%;
-    }
-    .publicity {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        float: right;
-        margin-top: 0;
-    }
-
-    .card-publicity {
-        margin: 15px;
-    }
 }
 
 
@@ -213,6 +214,27 @@
     /* .search {
         width: 400px;
     } */
+    .main-container {
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .categories {
+        width: 80%;
+    }
+    .publicity {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        float: right;
+        margin-top: 0;
+    }
+
+    .card-publicity {
+        margin: 15px 0 15px 0;
+    }
 
     .img-contacto {
         background-image: url(/img/diseo-y-desarrollo-web-building-a-website.png);

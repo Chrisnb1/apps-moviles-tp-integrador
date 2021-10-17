@@ -304,8 +304,8 @@ const renderProductsDetails = (datos, id) => {
         let details = 
         `
         <div>
-            <h3>Tags: ${obj.strTags}</h3>
-            <p>Area: ${obj.strArea}</p> 
+            <p><b>Categoria:</b> ${obj.strCategory}</p>
+            <p><b>Area:</b> ${obj.strArea}</p> 
             
             <a href="${obj.strSource}" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/cooking-book.png"/></a>
             <a href="${obj.strYoutube}" target="_blank"><img src="https://img.icons8.com/color/50/000000/youtube-play.png"/></a>
