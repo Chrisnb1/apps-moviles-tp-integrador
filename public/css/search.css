@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main {
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+.search-image {
+    padding: 50px 50px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/img/fondo-product-3.jpg);
+}
+
+.search {
+    margin-top: 30px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 55px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.text-search {
+    text-align: center;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 30px;
+    width: 100%;
+}
+
+.btn {
+    text-align: center;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.btn-search {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    padding: 15px;
+    padding-bottom: 5px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    color: #fff;
+}
+
+.btn-search i {
+    font-size: 25px;
+}
+
+.search-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+}
+
+.search-1:hover,
+.btn-search:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.select select {
+    width: 85%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    appearance: none;
+    color: rgb(255, 254, 254);
+}
+
+select:focus {
+    outline: none;
+}
+
+select option[value="0"] {
+    color: white;
+    background-color: rgb(150, 150, 150);
+}
+
+select option {
+    font-size: 15px;
+    margin: 40px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 1px 0 rgba(255, 0, 0, 0.4);
+}
+
+.select-icon {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 5%;
+}
+
+
+/* Moviles en horizontal o tablets en vertical */
+
+@media (min-width: 480px) {
+    .search {
+        width: 300px;
+    }
+}
+
+
+/* Tablets en horizontal y escritorios normales */
+
+@media (min-width: 767px) {
+    .logo img {
+        width: 25%;
+        height: 25%;
+    }
+}
+
+
+/* Escritorios muy anchos */
+
+@media (min-width: 950px) {
+    .select select {
+        width: 100%;
+    }
+    .search {
+        width: 300px;
+    }
+}

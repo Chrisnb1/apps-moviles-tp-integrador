@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css" integrity="sha512-lCU0XyQA8yobR7ychVxEOU5rcxs0+aYh/9gNDLaybsgW9hdrtqczjfKVNIS5doY0Y5627/+3UVuoGv7p8QsUFw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header&footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <!-- <link rel="stylesheet" href="/css/search.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-bar">
+            <a href="#" class="btn-menu"><i class="material-icons">format_list_bulleted</i>Sitio de Comidas</a>
+
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="/html/index.html" class="option-bar">Inicio</a></li>
+                <li><a href="/html/search.html" class="option-bar">Buscar</a></li>
+                <li><a href="/html/cart.html" class="option-bar">Carrito</a></li>
+                <li><a href="/html/history.html" class="option-bar">Historial</a></li>
+                <li class="li-icon first-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="instagram" src="https://img.icons8.com/material-outlined/24/808080/instagram-new--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="twitter" src="https://img.icons8.com/ios-glyphs/30/808080/twitter--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="facebook" src="https://img.icons8.com/material-outlined/30/808080/facebook-new.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="title-1 title-2">
+            <h4 class="title">¡Tus Platos al Carrito!</h4>
+            <br>
+            <img src="https://img.icons8.com/ios/50/000000/restaurant.png" />
+            <h5 class="sub-title">Todas tus Preferencias</h5>
+        </div>
+        <div class="product-image image-2">
+            <div class="table-container">
+                <table class="table" id="cart">
+                    <thead>
+                        <tr>
+                            <th scope="col">PLATO</th>
+                            <th scope="col">ITEM</th>
+                            <th scope="col">CANTIDAD</th>
+                            <th scope="col">PRECIO</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="items"></tbody>
+
+                    <tfoot>
+                        <tr class="table-footer" id="footer">
+                            <th scope='col'></th>
+                            <th scope='col' align='center'>PRECIO TOTAL:</th>
+                            <th scope='col'></th>
+                            <th scope='col' id="total"></th>
+                            <th scope='col'></th>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; Servicio de Comidas - Grupo 1 (Nicolas Acuña - Christian Botta).</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/js/cart.js"></script>
+    <script src="/js/menu.js "></script>
+
+</body>
+
+</html>

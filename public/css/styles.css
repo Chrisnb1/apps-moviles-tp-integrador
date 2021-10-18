@@ -1,1 +1,208 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+.main {
+    width: 100%;
+}
+
+.image,
+
+/*.image-2,*/
+
+.categories {
+    padding: 50px 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/img/fondo-buscador.png);
+}
+
+.text-image,
+.sub-text-image {
+    text-align: center;
+    margin-top: 0;
+}
+
+.text-image .text {
+    font: var(--font_3);
+    color: #fff;
+}
+
+.search {
+    display: block;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 55px;
+    border-radius: 40px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.text-search {
+    text-align: left;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 30px;
+    width: 190px;
+}
+
+.btn-search {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-search i {
+    font-size: 30px;
+    float: right;
+}
+
+::placeholder {
+    color: rgb(197, 197, 197);
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    width: 50%;
+    height: 50%;
+}
+
+.sub-text-image .sub-text {
+    font: var(--font_3);
+    font-size: 24px;
+    color: #fff;
+}
+
+.title-1 {
+    text-align: center;
+    margin: 50px 0 50px 0;
+    color: #2f2e2e;
+}
+
+.title {
+    font: var(--font_4);
+}
+
+.sub-title {
+    font: var(--font_2);
+}
+
+.categories {
+    background-image: url(/img/fondo-productos.webp);
+    background-attachment: fixed;
+}
+
+.title-contact {
+    text-align: center;
+    margin: 25px;
+}
+
+.history-image,
+.map-container {
+    padding: 50px 50px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.history-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(/img/fondo-carrito.webp);
+}
+
+.title-history {
+    text-align: center;
+    margin-top: 0;
+    color: #fafafa;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/fondo-maps.webp);
+    margin-top: 15px;
+}
+
+#mapId {
+    width: 70%;
+    height: 200px;
+    margin: 10px;
+}
+
+.publicity {
+    display: none;
+}
+
+
+/* Tablets en horizontal y escritorios normales */
+
+@media (min-width: 767px) {
+    .logo img {
+        width: 25%;
+        height: 25%;
+    }
+    #mapId {
+        width: 70%;
+        height: 400px;
+        margin: 10px;
+    }
+    .img-contacto {
+        background-image: url(/img/fondo-carrito.webp);
+        background-attachment: fixed;
+        padding: 50px 50px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+    }
+}
+
+
+/* Escritorios muy anchos */
+
+@media (min-width: 950px) {
+    .main-container {
+        width: 99%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .categories {
+        width: 80%;
+    }
+    .publicity {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        float: right;
+        margin-top: 0;
+        background-color: rgb(218, 218, 218);
+        text-align: center;
+    }
+    .card-publicity {
+        margin: 15px 0 15px 0;
+    }
+}

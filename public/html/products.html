@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header&footer.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/cards.css">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-bar">
+            <a href="#" class="btn-menu"><i class="material-icons">format_list_bulleted</i>Sitio de Comidas</a>
+
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="/html/index.html" class="option-bar">Inicio</a></li>
+                <li><a href="/html/search.html" class="option-bar">Buscar</a></li>
+                <li><a href="/html/cart.html" class="option-bar">Carrito</a></li>
+                <li><a href="/html/history.html" class="option-bar">Historial</a></li>
+                <li class="li-icon first-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="instagram" src="https://img.icons8.com/material-outlined/24/808080/instagram-new--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="twitter" src="https://img.icons8.com/ios-glyphs/30/808080/twitter--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="/html/index.html#contacto" class="option-bar">
+                        <img class="facebook" src="https://img.icons8.com/material-outlined/30/808080/facebook-new.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="title-1">
+            <h4 class="title">¡Platos Destacados!</h4>
+
+            <img src="https://img.icons8.com/ios/80/2f2e2e/tableware.png" />
+            <br>
+            <h5 class="sub-title">Cada uno en detalle.</h5>
+        </div>
+
+        <div class="product-image">
+
+            <div class="products-div" id="itemContainer"></div>
+            <div class="btn-container"></div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; Servicio de Comidas - Grupo 1 (Nicolas Acuña - Christian Botta).</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="/js/products.js"></script>
+    <script src="/js/menu.js "></script>
+
+</body>
+
+</html>

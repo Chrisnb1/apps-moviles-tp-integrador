@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/header&footer.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <title>Index</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu-bar">
+            <a href="#" class="btn-menu"><i class="material-icons">format_list_bulleted</i>Sitio de Comidas</a>
+
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="/html/index.html" class="option-bar">Inicio</a></li>
+                <li><a href="/html/search.html" class="option-bar">Buscar</a></li>
+                <li><a href="/html/cart.html" class="option-bar">Carrito</a></li>
+                <li><a href="/html/history.html" class="option-bar">Historial</a></li>
+                <li class="li-icon first-icon">
+                    <a href="#contacto" class="option-bar">
+                        <img class="instagram" src="https://img.icons8.com/material-outlined/24/808080/instagram-new--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="#contacto" class="option-bar">
+                        <img class="twitter" src="https://img.icons8.com/ios-glyphs/30/808080/twitter--v1.png" />
+                    </a>
+                </li>
+                <li class="li-icon">
+                    <a href="#contacto" class="option-bar">
+                        <img class="facebook" src="https://img.icons8.com/material-outlined/30/808080/facebook-new.png" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="main">
+        <div class="image">
+            <div class="text-image">
+                <h1 class="text-image text"><span>LOS MEJORES PLATOS</span></h1>
+            </div>
+            <div class="logo">
+                <img src="/img/logo-restaurant-white.png" alt="logo-restaurant">
+            </div>
+            <div class="sub-text-image">
+                <h4 class="sub-text">A TU SERVICIO</h4>
+            </div>
+        </div>
+        <div class="title-1">
+            <h4 class="title">¡Selecciona una categoria!</h4>
+            <br>
+            <img src="https://img.icons8.com/ios/50/2f2e2e/restaurant.png" />
+            <br>
+            <h5 class="sub-title">Elige tus platos favoritos.</h5>
+        </div>
+        <div class="main-container">
+            <div class="categories">
+
+                <div class="image-2">
+                    <div class="products-index"></div>
+                </div>
+            </div>
+            <div class="publicity">
+                <aside>
+                    <h4 class="title title-contact">¡Platos del dia!</h4>
+                    <h5 class="sub-title">(Publicidad)</h5>
+                    <div class="publicity-container"></div>
+                </aside>
+            </div>
+        </div>
+        <div class="title-1">
+            <h4 class="title">Nuestros desarrolladores</h4>
+            <br>
+            <i class="material-icons" style="font-size:48px">developer_mode</i>
+            <br>
+            <h5 class="sub-title">Nuestro Equipo.</h5>
+        </div>
+        <div id="contacto">
+            <section class="img-contacto">
+                <div class="products-div">
+                    <div class="card card-contact">
+                        <img class="img-contact" src="/img/contacto.webp" alt="logo software-programador-lenguaje-avatar">
+                        <h1><i class="material-icons" style="font-size:36px">more_horiz</i></h1>
+                        <h4 class="title">Nicolas Acuña</h4>
+                        <div class="icons-cards">
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" /></a>
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/facebook.png" /></a>
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" /></a>
+                        </div>
+                    </div>
+                    <div class="card card-contact">
+                        <img class="img-contact" src="/img/contacto_1.jpg" alt="dev logo">
+                        <h1><i class="material-icons" style="font-size:36px">more_horiz</i></h1>
+                        <h4 class="sub-title">Christian Botta</h4>
+                        <div class="icons-cards">
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" /></a>
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/facebook.png" /></a>
+                            <a href="#"><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="title-1">
+                <h4 class="title">¡Nuestra Oficina!</h4>
+                <br>
+                <i class="material-icons" style="font-size:48px">location_on</i>
+                <br>
+                <h5 class="sub-title">Catedral de La Plata.</h5>
+            </div>
+            <section>
+                <div class="map-container">
+                    <div id="mapId"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; Servicio de Comidas - Grupo 1 (Nicolas Acuña - Christian Botta).</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/menu.js "></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

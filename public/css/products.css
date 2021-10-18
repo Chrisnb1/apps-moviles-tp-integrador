@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+}
+
+.product-image,
+.title-1 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.title-1 {
+    text-align: center;
+    margin: 0;
+    color: #2f2e2e;
+    background-image: url(/img/fondo-productos-2.webp);
+    background-size: cover;
+    padding: 100px 60px;
+}
+
+.title {
+    font: var(--font_4);
+}
+
+.sub-title {
+    font: var(--font_2);
+}
+
+.product-image {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 0.1)), url(/img/fondo-titulo.webp);
+    background-size: cover;
+    padding: 60px 60px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.see-more {
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.priceH2 {
+    margin: 10px;
+}
